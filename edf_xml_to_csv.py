@@ -57,6 +57,14 @@ def getCurrentStory(xmlStrArray):
 
 
 
+print('StoryContent/Id/SUID,StoryContent/Story/Version,StoryContent/Event,StoryContent/Story/LanguageString,StoryContent/Story/LanguageId,' +
+      'StoryContent/Story/BodyTextType,StoryContent/Story/Slug,StoryContent/Story/TopicClusterId,StoryContent/Story/TextEncoding,StoryContent/Story/HotLevel,' +
+      'StoryContent/Story/TimeOfUpdate,StoryContent/Story/HeadlineClusterId,StoryContent/Story/Metadata/WireId,' +
+      'StoryContent/Story/Metadata/WireName,StoryContent/Story/Metadata/ClassNum,StoryContent/Story/Metadata/StoryGroupId,' +
+      'StoryContent/Story/Metadata/TimeOfArrival,StoryContent/Story/Metadata/Headline,' +
+      'StoryContent/Story/Metadata/AssignedTickers,StoryContent/Story/Metadata/AssignedTopics,' +
+      'StoryContent/Story/Metadata/AssignedPeople,StoryContent/Story/Metadata/DerivedTickers,' +
+     'StoryContent/Story/Metadata/DerivedTopics,StoryContent/Story/Metadata/DerivedPeople')
 
 with open("/Users/guillaumetorche/Downloads/EID56899_20170611.xml") as infile:
     contentXmlStr = ''
@@ -91,7 +99,6 @@ with open("/Users/guillaumetorche/Downloads/EID56899_20170611.xml") as infile:
 
             finalCsv += getCsv('Metadata/WireId', treeStory) + ','
             finalCsv += getCsv('Metadata/WireName', treeStory) + ','
-            finalCsv += getCsv('Metadata/WireId', treeStory) + ','
             finalCsv += getCsv('Metadata/ClassNum', treeStory) + ','
             finalCsv += getCsv('Metadata/StoryGroupId', treeStory) + ','
             finalCsv += getCsv('Metadata/TimeOfArrival', treeStory) + ','
